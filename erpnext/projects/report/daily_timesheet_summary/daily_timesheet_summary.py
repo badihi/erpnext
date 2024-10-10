@@ -1,6 +1,6 @@
 # Copyright (c) 2013, Frappe Technologies Pvt. Ltd. and contributors
 # For license information, please see license.txt
-
+import jdatetime
 
 import frappe
 from frappe import _
@@ -47,6 +47,15 @@ def get_data(conditions, filters):
 		filters,
 		as_list=1,
 	)
+
+	#changing to string of jdatetime.datetime
+	if frappe.defaults.get_defaults().calendar_type == 'jalali':
+		for time in time_sheet:
+			date = jdatetime.datetime.fromgregorian(date=time[3])
+			time[3]=str(date)
+			date = jdatetime.datetime.fromgregorian(date=time[4])
+			time[4]=str(date)
+	
 
 	return time_sheet
 
