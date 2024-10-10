@@ -167,6 +167,7 @@ def add_standard_navbar_items():
 	navbar_settings = frappe.get_single("Navbar Settings")
 
 	erpnext_navbar_items = [
+		'''
 		{
 			"item_label": "Documentation",
 			"item_type": "Route",
@@ -191,6 +192,7 @@ def add_standard_navbar_items():
 			"route": "https://github.com/frappe/erpnext/issues",
 			"is_standard": 1,
 		},
+		'''
 	]
 
 	current_navbar_items = navbar_settings.help_dropdown
@@ -202,6 +204,7 @@ def add_standard_navbar_items():
 			navbar_settings.append("help_dropdown", item)
 
 	for item in current_navbar_items:
+		
 		navbar_settings.append(
 			"help_dropdown",
 			{
@@ -213,6 +216,7 @@ def add_standard_navbar_items():
 				"hidden": item.hidden,
 			},
 		)
+		
 
 	navbar_settings.save()
 
