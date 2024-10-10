@@ -7,11 +7,10 @@ from typing import List
 import frappe
 from frappe import _, scrub
 from frappe.query_builder.functions import CombineDatetime
-from frappe.utils import get_first_day as get_first_day_of_month
-from frappe.utils import get_first_day_of_week, get_quarter_start, getdate
+from frappe.utils import  getdate
 from frappe.utils.nestedset import get_descendants_of
+from frappe.utils import  get_periods_in_range, get_standard_period_label
 
-from erpnext.accounts.utils import get_fiscal_year
 from erpnext.stock.doctype.warehouse.warehouse import apply_warehouse_filter
 from erpnext.stock.utils import is_reposting_item_valuation_in_progress
 
@@ -59,95 +58,16 @@ def get_columns(filters):
 	return columns
 
 
-def get_period_date_ranges(filters):
-	from dateutil.relativedelta import relativedelta
+def get_period_date_ranges(filters):#changed
 
-	from_date = round_down_to_nearest_frequency(filters.from_date, filters.range)
+	from_date = getdate(filters.from_date)
 	to_date = getdate(filters.to_date)
+	
+	return get_periods_in_range(from_date, to_date, filters.range, company=filters.company)
 
-	increment = {"Monthly": 1, "Quarterly": 3, "Half-Yearly": 6, "Yearly": 12}.get(filters.range, 1)
-
-	periodic_daterange = []
-	for dummy in range(1, 53, increment):
-		if filters.range == "Weekly":
-			period_end_date = from_date + relativedelta(days=6)
-		else:
-			period_end_date = add_months_to_date(from_date, increment)
-
-		if period_end_date > to_date:
-			period_end_date = to_date
-		periodic_daterange.append([from_date, period_end_date])
-
-		from_date = period_end_date + relativedelta(days=1)
-		if period_end_date == to_date:
-			break
-	return periodic_daterange
-
-def add_months_to_date(date, increment):
-	from dateutil.relativedelta import relativedelta
-
-	if get_calendar_name() == 'jalali':
-		date = jdatetime.date.fromgregorian(date=date)
-		overflow_years, month = divmod(date.month + increment - 1, 12)
-		month = month + 1
-		year = date.year + overflow_years
-		day = date.day - 1
-		if day == 0:
-			day = 30
-			month = month - 1
-			if month == 0:
-				month = 12
-				year = year - 1
-		new_date = jdatetime.date(year, month, day)
-		return new_date.togregorian()
-	else:
-		return date + relativedelta(months=increment, days=-1)
-
-
-def round_down_to_nearest_frequency(date: str, frequency: str) -> datetime.datetime:
-	"""Rounds down the date to nearest frequency unit.
-	example:
-
-	>>> round_down_to_nearest_frequency("2021-02-21", "Monthly")
-	datetime.datetime(2021, 2, 1)
-
-	>>> round_down_to_nearest_frequency("2021-08-21", "Yearly")
-	datetime.datetime(2021, 1, 1)
-	"""
-
-	def _get_first_day_of_fiscal_year(date):
-		fiscal_year = get_fiscal_year(date)
-		return fiscal_year and fiscal_year[1] or date
-
-	round_down_function = {
-		"Monthly": get_first_day_of_month,
-		"Quarterly": get_quarter_start,
-		"Weekly": get_first_day_of_week,
-		"Yearly": _get_first_day_of_fiscal_year,
-	}.get(frequency, getdate)
-	return round_down_function(date, use_custom_calendar=True)
-
-
-def get_period(posting_date, filters):
-	if get_calendar_name() == 'jalali':
-		posting_date = jdatetime.date.fromgregorian(date=posting_date)
-
-	if filters.range == "Weekly":
-		period = _("Week {0} {1}").format(str(posting_date.isocalendar()[1]), str(posting_date.year))
-	elif filters.range == "Monthly":
-		period = _(posting_date.strftime('%b')) + " " + str(posting_date.year)
-	elif filters.range == "Quarterly":
-		period = _("Quarter {0} {1}").format(
-			str(((posting_date.month - 1) // 3) + 1), str(posting_date.year)
-		)
-	else:
-		year = get_fiscal_year(posting_date, company=filters.company)
-		period = str(year[2])
-
-	return period
-
-def get_calendar_name():
-	return frappe.defaults.get_defaults().calendar_type
+def get_period(posting_date, filters):#changed
+	
+	return get_standard_period_label(posting_date, filters.range, filters.company)
 
 
 def get_periodic_data(entry, filters):

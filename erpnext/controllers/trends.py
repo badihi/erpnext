@@ -5,6 +5,7 @@
 import frappe
 from frappe import _
 from frappe.utils import getdate
+from frappe.utils import  get_periods_in_range, get_nonstandard_period_label
 
 
 def get_columns(filters, trans):
@@ -247,16 +248,10 @@ def period_wise_columns_query(filters, trans):
 
 
 def get_period_wise_columns(bet_dates, period, pwc):
-	if period == "Monthly":
-		pwc += [
-			_(get_mon(bet_dates[0])) + " (" + _("Qty") + "):Float:120",
-			_(get_mon(bet_dates[0])) + " (" + _("Amt") + "):Currency:120",
-		]
-	else:
-		pwc += [
-			_(get_mon(bet_dates[0])) + "-" + _(get_mon(bet_dates[1])) + " (" + _("Qty") + "):Float:120",
-			_(get_mon(bet_dates[0])) + "-" + _(get_mon(bet_dates[1])) + " (" + _("Amt") + "):Currency:120",
-		]
+	pwc += [
+		_(get_nonstandard_period_label(bet_dates[0], bet_dates[1], period)) + " (" + _("Qty") + "):Float:120",
+		_(get_nonstandard_period_label(bet_dates[0], bet_dates[1], period)) + " (" + _("Amt") + "):Currency:120",
+	]
 
 
 def get_period_wise_query(bet_dates, trans_date, query_details):
@@ -272,26 +267,12 @@ def get_period_wise_query(bet_dates, trans_date, query_details):
 
 @frappe.whitelist(allow_guest=True)
 def get_period_date_ranges(period, fiscal_year=None, year_start_date=None):
-	from dateutil.relativedelta import relativedelta
 
 	if not year_start_date:
 		year_start_date, year_end_date = frappe.get_cached_value(
 			"Fiscal Year", fiscal_year, ["year_start_date", "year_end_date"]
 		)
-
-	increment = {"Monthly": 1, "Quarterly": 3, "Half-Yearly": 6, "Yearly": 12}.get(period)
-
-	period_date_ranges = []
-	for i in range(1, 13, increment):
-		period_end_date = getdate(year_start_date) + relativedelta(months=increment, days=-1)
-		if period_end_date > getdate(year_end_date):
-			period_end_date = year_end_date
-		period_date_ranges.append([year_start_date, period_end_date])
-		year_start_date = period_end_date + relativedelta(days=1)
-		if period_end_date == year_end_date:
-			break
-
-	return period_date_ranges
+	return get_periods_in_range(year_start_date, year_end_date, period, standard_period=False)
 
 
 def get_period_month_ranges(period, fiscal_year):
