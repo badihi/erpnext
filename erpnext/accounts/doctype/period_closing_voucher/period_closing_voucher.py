@@ -15,6 +15,26 @@ from erpnext.controllers.accounts_controller import AccountsController
 
 
 class PeriodClosingVoucher(AccountsController):
+	# begin: auto-generated types
+	# This code is auto-generated. Do not modify anything in this block.
+
+	from typing import TYPE_CHECKING
+
+	if TYPE_CHECKING:
+		from frappe.types import DF
+
+		amended_from: DF.Link | None
+		closing_account_head: DF.Link
+		company: DF.Link
+		error_message: DF.Text | None
+		fiscal_year: DF.Link
+		gle_processing_status: DF.Literal["In Progress", "Completed", "Failed"]
+		posting_date: DF.Date
+		remarks: DF.SmallText
+		transaction_date: DF.Date | None
+		year_start_date: DF.Date | None
+	# end: auto-generated types
+
 	def validate(self):
 		self.validate_account_head()
 		self.validate_posting_date()
@@ -47,7 +67,8 @@ class PeriodClosingVoucher(AccountsController):
 				enqueue_after_commit=True,
 			)
 			frappe.msgprint(
-				_("The GL Entries will be cancelled in the background, it can take a few minutes."), alert=True
+				_("The GL Entries will be cancelled in the background, it can take a few minutes."),
+				alert=True,
 			)
 		else:
 			make_reverse_gl_entries(voucher_type="Period Closing Voucher", voucher_no=self.name)
@@ -89,9 +110,7 @@ class PeriodClosingVoucher(AccountsController):
 			self.posting_date, self.fiscal_year, self.company, label=_("Posting Date"), doc=self
 		)
 
-		self.year_start_date = get_fiscal_year(
-			self.posting_date, self.fiscal_year, company=self.company
-		)[1]
+		self.year_start_date = get_fiscal_year(self.posting_date, self.fiscal_year, company=self.company)[1]
 
 		self.check_if_previous_year_closed()
 
@@ -117,17 +136,28 @@ class PeriodClosingVoucher(AccountsController):
 
 	def check_if_previous_year_closed(self):
 		last_year_closing = add_days(self.year_start_date, -1)
-
 		previous_fiscal_year = get_fiscal_year(last_year_closing, company=self.company, boolean=True)
+		if not previous_fiscal_year:
+			return
 
-		if previous_fiscal_year and not frappe.db.exists(
-			"GL Entry", {"posting_date": ("<=", last_year_closing), "company": self.company}
+		previous_fiscal_year_start_date = previous_fiscal_year[0][1]
+		if not frappe.db.exists(
+			"GL Entry",
+			{
+				"posting_date": ("between", [previous_fiscal_year_start_date, last_year_closing]),
+				"company": self.company,
+				"is_cancelled": 0,
+			},
 		):
 			return
 
-		if previous_fiscal_year and not frappe.db.exists(
+		if not frappe.db.exists(
 			"Period Closing Voucher",
-			{"posting_date": ("<=", last_year_closing), "docstatus": 1, "company": self.company},
+			{
+				"posting_date": ("between", [previous_fiscal_year_start_date, last_year_closing]),
+				"docstatus": 1,
+				"company": self.company,
+			},
 		):
 			frappe.throw(_("Previous Year is not closed, please close it first"))
 
@@ -204,7 +234,9 @@ class PeriodClosingVoucher(AccountsController):
 				"credit_in_account_currency": abs(flt(acc.bal_in_account_currency))
 				if flt(acc.bal_in_account_currency) > 0
 				else 0,
-				"credit": abs(flt(acc.bal_in_company_currency)) if flt(acc.bal_in_company_currency) > 0 else 0,
+				"credit": abs(flt(acc.bal_in_company_currency))
+				if flt(acc.bal_in_company_currency) > 0
+				else 0,
 				"is_period_closing_voucher_entry": 1,
 			},
 			item=acc,
@@ -228,7 +260,9 @@ class PeriodClosingVoucher(AccountsController):
 				"credit_in_account_currency": abs(flt(acc.bal_in_account_currency))
 				if flt(acc.bal_in_account_currency) < 0
 				else 0,
-				"credit": abs(flt(acc.bal_in_company_currency)) if flt(acc.bal_in_company_currency) < 0 else 0,
+				"credit": abs(flt(acc.bal_in_company_currency))
+				if flt(acc.bal_in_company_currency) < 0
+				else 0,
 				"is_period_closing_voucher_entry": 1,
 			},
 			item=acc,
@@ -358,8 +392,7 @@ def process_closing_entries(gl_entries, closing_entries, voucher_name, company, 
 	)
 
 	try:
-		if gl_entries + closing_entries:
-			make_closing_entries(gl_entries + closing_entries, voucher_name, company, closing_date)
+		make_closing_entries(gl_entries + closing_entries, voucher_name, company, closing_date)
 	except Exception as e:
 		frappe.db.rollback()
 		frappe.log_error(e)
