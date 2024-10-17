@@ -346,6 +346,13 @@
   {
    "color": "Grey",
    "doc_view": "List",
+   "label": "Plant Floor",
+   "link_to": "Plant Floor",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
    "label": "BOM Creator",
    "link_to": "BOM Creator",
    "type": "DocType"
