@@ -9,6 +9,22 @@ from frappe.utils import get_link_to_form
 
 
 class ProductBundle(Document):
+	# begin: auto-generated types
+	# This code is auto-generated. Do not modify anything in this block.
+
+	from typing import TYPE_CHECKING
+
+	if TYPE_CHECKING:
+		from frappe.types import DF
+
+		from erpnext.selling.doctype.product_bundle_item.product_bundle_item import ProductBundleItem
+
+		description: DF.Data | None
+		disabled: DF.Check
+		items: DF.Table[ProductBundleItem]
+		new_item_code: DF.Link
+	# end: auto-generated types
+
 	def autoname(self):
 		self.name = self.new_item_code
 
@@ -49,7 +65,7 @@ class ProductBundle(Document):
 
 		if len(invoice_links):
 			frappe.throw(
-				"This Product Bundle is linked with {0}. You will have to cancel these documents in order to delete this Product Bundle".format(
+				"This Product Bundle is linked with {}. You will have to cancel these documents in order to delete this Product Bundle".format(
 					", ".join(invoice_links)
 				),
 				title=_("Not Allowed"),
@@ -81,9 +97,7 @@ def get_new_item_code(doctype, txt, searchfield, start, page_len, filters):
 	query = (
 		frappe.qb.from_(item)
 		.select(item.item_code, item.item_name)
-		.where(
-			(item.is_stock_item == 0) & (item.is_fixed_asset == 0) & (item[searchfield].like(f"%{txt}%"))
-		)
+		.where((item.is_stock_item == 0) & (item.is_fixed_asset == 0) & (item[searchfield].like(f"%{txt}%")))
 		.limit(page_len)
 		.offset(start)
 	)
