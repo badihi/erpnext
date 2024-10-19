@@ -307,34 +307,11 @@ class Analytics:
 		return get_standard_period_label(posting_date, self.filters.range, company=self.filters.company)
 
 	def get_period_date_ranges(self):
-		from dateutil.relativedelta import MO, relativedelta
 
 		from_date, to_date = getdate(self.filters.from_date), getdate(self.filters.to_date)
 
-		increment = {"Monthly": 1, "Quarterly": 3, "Half-Yearly": 6, "Yearly": 12}.get(self.filters.range, 1)
-
-		if self.filters.range in ["Monthly", "Quarterly"]:
-			from_date = from_date.replace(day=1)
-		elif self.filters.range == "Yearly":
-			from_date = get_fiscal_year(from_date)[1]
-		else:
-			from_date = from_date + relativedelta(from_date, weekday=MO(-1))
-
-		self.periodic_daterange = []
-		for _dummy in range(1, 53):
-			if self.filters.range == "Weekly":
-				period_end_date = add_days(from_date, 6)
-			else:
-				period_end_date = add_to_date(from_date, months=increment, days=-1)
-
-			if period_end_date > to_date:
-				period_end_date = to_date
-
-			self.periodic_daterange.append(period_end_date)
-
-			from_date = add_days(period_end_date, 1)
-			if period_end_date == to_date:
-				break
+		self.periodic_daterange = get_periods_in_range(from_date, to_date, self.filters.range, company=self.filters.company)
+		self.periodic_daterange = [i[1] for i in self.periodic_daterange]
 
 	def get_groups(self):
 		if self.filters.tree_type == "Territory":
