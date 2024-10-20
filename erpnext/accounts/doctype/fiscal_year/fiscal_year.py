@@ -6,7 +6,7 @@ import frappe
 from dateutil.relativedelta import relativedelta
 from frappe import _
 from frappe.model.document import Document
-from frappe.utils import add_days, add_years, cstr, getdate
+from frappe.utils import add_days, add_years, cstr, getdate, add_months_to_date
 
 
 class FiscalYear(Document):
@@ -58,7 +58,7 @@ class FiscalYear(Document):
 			# under certain circumstances. For example, in the USA and Germany.
 			return
 
-		date = getdate(self.year_start_date) + relativedelta(years=1) - relativedelta(days=1)
+		date = add_months_to_date(getdate(self.year_start_date), increment=12)
 
 		if getdate(self.year_end_date) != date:
 			frappe.throw(
