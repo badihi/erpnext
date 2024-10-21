@@ -85,22 +85,21 @@ erpnext.LeadController = class LeadController extends frappe.ui.form.Controller 
 		);
 	}
 
-	make_customer() {
+	make_customer(frm) {
 		frappe.model.open_mapped_doc({
 			method: "erpnext.crm.doctype.lead.lead.make_customer",
-			frm: this.frm,
+			frm: frm,
 		});
 	}
 
-	make_quotation() {
+	make_quotation(frm) {
 		frappe.model.open_mapped_doc({
 			method: "erpnext.crm.doctype.lead.lead.make_quotation",
-			frm: this.frm,
+			frm,
 		});
 	}
 
-	async make_opportunity() {
-		const frm = this.frm;
+	async make_opportunity(frm) {
 		let existing_prospect = (
 			await frappe.db.get_value(
 				"Prospect Lead",
