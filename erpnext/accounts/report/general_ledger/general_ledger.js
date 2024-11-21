@@ -77,7 +77,24 @@ frappe.query_reports["General Ledger"] = {
 				if (!frappe.query_report.filters) return;
 
 				let party_type = frappe.query_report.get_filter_value("party_type");
-				if (!party_type) return;
+				if (!party_type) {
+
+					let option_customer_promise = frappe.db.get_link_options("Customer", txt);
+					let option_employee_promise = frappe.db.get_link_options("Employee", txt);
+					let option_shareholder_promise = frappe.db.get_link_options("Shareholder", txt);
+					let option_supplier_promise = frappe.db.get_link_options("Supplier", txt);
+
+					return Promise.all([option_customer_promise, option_employee_promise, option_shareholder_promise, option_supplier_promise])
+						.then(results => {
+							
+							let [option_customer, option_employee, option_shareholder, option_supplier] = results;
+
+							let combined_options = [...option_customer, ...option_employee, ...option_shareholder, ...option_supplier];
+
+							return combined_options;
+						})
+
+				}
 
 				return frappe.db.get_link_options(party_type, txt);
 			},
