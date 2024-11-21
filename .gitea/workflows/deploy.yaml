@@ -1,0 +1,19 @@
+name: Deploy on Main
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Explore-Gitea-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Update dependencies
+        run: bench update --requirements
+
+      - name: Build project
+        run: bench build

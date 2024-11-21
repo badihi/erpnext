@@ -602,7 +602,7 @@ Create,ایجاد,
 Create BOM,BOM ثبت,
 Create Delivery Trip,سفر تحویل را ثبت کنید,
 Create Employee,ایجاد کارمند,
-Create Employee Records,درست کارمند سوابق,
+Create Employee Records,ثبت سوابق کارمند,
 "Create Employee records to manage leaves, expense claims and payroll",درست سوابق کارمند به مدیریت برگ، ادعاهای هزینه و حقوق و دستمزد,
 Create Fee Schedule,ثبت برنامه هزینه,
 Create Fees,ثبت هزینه‌ها,
@@ -632,7 +632,7 @@ Create Student Batch,دسته دانشجویی ایجاد کنید,
 Create Student Groups,ایجاد گروه دانشجویی,
 Create Supplier Quotation,ثبت پیش فاکتور تامین کننده,
 Create Tax Template,ایجاد الگوی مالیات,
-Create Timesheet,برگه ایجاد کنید,
+Create Timesheet,ثبت تایم شیت,
 Create User,ایجاد کاربر,
 Create Users,ایجاد کاربران,
 Create Variant,ثبت گونه,
@@ -642,7 +642,7 @@ Create customer quotes,درست به نقل از مشتری,
 Create rules to restrict transactions based on values.,ایجاد قوانین برای محدود کردن معاملات بر اساس ارزش.,
 Created {0} scorecards for {1} between: ,{0} کارت امتیازی برای {1} ایجاد شده بین:,
 Creating Company and Importing Chart of Accounts,ایجاد شرکت و وارد کردن نمودار حساب,
-Creating Fees,ثبت هزینه ها,
+Creating Fees,ثبت هزینه‌ها,
 Creating student groups,ایجاد گروه های دانشجویی,
 Creating {0} Invoice,ثبت صورتحساب {0},
 Credit,بستانکاری,
@@ -1286,9 +1286,9 @@ Items for Raw Material Request,مواردی برای درخواست مواد ا�
 Job Card,کارت فعالیت,
 Job card {0} created,کارت فعالیت {0} ایجاد شد,
 Join,پیوستن,
-Journal Entries {0} are un-linked,ورودی های دفتر {0} مشابه نیستند,
-Journal Entry,ورودی دفتر,
-Journal Entry {0} does not have account {1} or already matched against other voucher,مجله ورودی {0} می کند حساب کاربری ندارید {1} یا در حال حاضر همسان در برابر دیگر کوپن,
+Journal Entries {0} are un-linked,ثبت سندهای {0} متصل نیستند,
+Journal Entry,سند حسابداری,
+Journal Entry {0} does not have account {1} or already matched against other voucher,سند حسابداری {0} حساب {1} را ندارد یا در حال حاضر تطبیق یافته با سند دیگری است,
 Kanban Board,نمای کانبان,
 Key Reports,گزارش های کلیدی,
 LMS Activity,فعالیت LMS,
@@ -2071,7 +2071,7 @@ Quantity to Produce can not be less than Zero,مقدار تولید نمی تو�
 Query Options,گزینه های پرس و جو,
 Queued for replacing the BOM. It may take a few minutes.,برای جایگزینی BOM صفر ممکن است چند دقیقه طول بکشد.,
 Queued for updating latest price in all Bill of Materials. It may take a few minutes.,برای به‌روزرسانی آخرین قیمت در تمام بیل مواد. ممکن است چند دقیقه طول بکشد.,
-Quick Journal Entry,سریع دانشگاه علوم پزشکی ورودی,
+Quick Journal Entry,ثبت سریع سند حسابداری,
 Quot Count,تعداد Quot و,
 Quot/Lead %,Quot و / سرنخ٪,
 Quotation,پیش فاکتور,
@@ -2228,7 +2228,7 @@ Row #{0}: Clearance date {1} cannot be before Cheque Date {2},ردیف # {0}: ت
 Row #{0}: Duplicate entry in References {1} {2},ردیف # {0}: کپی مطلب در منابع {1} {2},
 Row #{0}: Expected Delivery Date cannot be before Purchase Order Date,ردیف # {0}: تاریخ تحویل احتمالی قبل از تاریخ دستور خرید نمی تواند باشد,
 Row #{0}: Item added,ردیف # {0}: مورد اضافه شد,
-Row #{0}: Journal Entry {1} does not have account {2} or already matched against another voucher,ردیف # {0}: مجله ورودی {1} می کند حساب کاربری ندارید {2} یا در حال حاضر همسان در برابر کوپن دیگر,
+Row #{0}: Journal Entry {1} does not have account {2} or already matched against another voucher,ردیف # {0}: سند حسابداری {1} حساب {2} را ندارد یا در حال حاضر تطبیق یافته با سند دیگری است,
 Row #{0}: Not allowed to change Supplier as Purchase Order already exists,ردیف # {0}: مجاز به تغییر به عنوان کننده دستور خرید در حال حاضر وجود,
 Row #{0}: Please set reorder quantity,ردیف # {0}: لطفا مقدار سفارش مجدد مجموعه,
 Row #{0}: Please specify Serial No for Item {1},ردیف # {0}: لطفا سریال مشخص نیست برای مورد {1},
@@ -2766,9 +2766,9 @@ Time slots added,اسلات زمان اضافه شده است,
 Time(in mins),زمان (در دقیقه),
 Timer,تایمر,
 Timer exceeded the given hours.,تایمر بیش از ساعت داده شده است.,
-Timesheet,برنامه زمانی,
-Timesheet for tasks.,برنامه زمانی برای انجام وظایف.,
-Timesheet {0} is already completed or cancelled,برنامه زمانی {0} است در حال حاضر تکمیل و یا لغو,
+Timesheet,تایم شیت,
+Timesheet for tasks.,تایم شیت برای انجام وظایف.,
+Timesheet {0} is already completed or cancelled,تایم شیت {0} است در حال حاضر تکمیل و یا لغو,
 Timesheets,برنامه های زمانی,
 "Timesheets help keep track of time, cost and billing for activites done by your team",برنامه های زمانی کمک به پیگیری از زمان، هزینه و صدور صورت حساب برای فعالیت های انجام شده توسط تیم خود را,
 Titles for print templates e.g. Proforma Invoice.,عناوین برای قالب چاپ به عنوان مثال پروفرم فاکتور.,
@@ -2820,7 +2820,7 @@ Total Budget,کل بودجه,
 Total Collected: {0},مجموع جمع‌آوری شده: {0},
 Total Commission,کمیسیون ها,
 Total Contribution Amount: {0},مجموع کمک مالی: {0},
-Total Credit/ Debit Amount should be same as linked Journal Entry,مجموع مبلغ بستانکاری / بدهکاری باید همانند ثبت دفتر باشد,
+Total Credit/ Debit Amount should be same as linked Journal Entry,مجموع مبلغ بستانکاری / بدهکاری باید همانند سند حسابداری باشد,
 Total Debit must be equal to Total Credit. The difference is {0},مجموع بدهکاری باید با مجموع بستانکاری مساوی باشد. تفاوت در این است {0},
 Total Invoiced Amount,کل مقدار صورتحساب,
 Total Order Considered,ترتیب مجموع در نظر گرفته شده,
@@ -2983,7 +2983,7 @@ Voucher #,سند #,
 Voucher No,شماره سند,
 Voucher Type,نوع سند,
 WIP Warehouse,انبار کار در حال انجام,
-Warehouse can not be deleted as stock ledger entry exists for this warehouse.,انبار نمی تواند حذف شود به عنوان ورودی دفتر انبار برای این انبار وجود دارد.,
+Warehouse can not be deleted as stock ledger entry exists for this warehouse.,از آنجا که سند حسابداری انبار برای این انبار وجود دارد انبار نمی تواند حذف شود.,
 Warehouse cannot be changed for Serial No.,انبار می توانید برای شماره سریال نمی تواند تغییر,
 Warehouse is mandatory,انبار الزامی است,
 Warehouse is mandatory for stock Item {0} in row {1},انبار برای کالای {0} در ردیف {1} الزامی است,
@@ -3044,7 +3044,7 @@ Year start date or end date is overlapping with {0}. To avoid please set company
 You are not authorized to add or update entries before {0},شما مجاز به اضافه و یا به‌روزرسانی مطالب قبل از {0} نیستید,
 You are not authorized to set Frozen value,شما مجاز به تنظیم مقدار ثابت شده نیستید,
 You can not change rate if BOM mentioned agianst any item,اگر ذکر بی ا م در مقابل هر ایتمی باشد شما نمیتوانید نرخ را تغییر دهید,
-You can not enter current voucher in 'Against Journal Entry' column,"شما نمی توانید سند هزینه جاری را  در ستون""علیه مجله "" وارد کنید",
+You can not enter current voucher in 'Against Journal Entry' column,"شما نمی توانید سند هزینه جاری را  در ستون""به ازای سند"" وارد کنید",
 You can only have Plans with the same billing cycle in a Subscription,فقط می توانید برنامه هایی با یک چرخه صدور صورت حساب در یک اشتراک داشته باشید,
 You can only redeem max {0} points in this order.,شما فقط می توانید حداکثر {0} امتیاز را در این ترتیب استفاده کنید.,
 You can only renew if your membership expires within 30 days,شما فقط می توانید تمدید کنید اگر عضویت شما در 30 روز منقضی شود,
@@ -3258,7 +3258,7 @@ Account Value,ارزش حساب,
 Account is mandatory to get payment entries,حساب برای دریافت ورودی های پرداخت الزامی است,
 Account is not set for the dashboard chart {0},حساب برای نمودار داشبورد {0} نظیم نشده است,
 Account {0} does not exists in the dashboard chart {1},حساب {0} در نمودار داشبورد {1} موجود نیست,
-Account: <b>{0}</b> is capital Work in progress and can not be updated by Journal Entry,حساب: <b>{0}</b> سرمایه در حال انجام است و توسط Journal Entry قابل به روزرسانی نیست,
+Account: <b>{0}</b> is capital Work in progress and can not be updated by Journal Entry,حساب: <b>{0}</b> سرمایه در حال انجام است و توسط سند حسابداری قابل به روزرسانی نیست,
 Account: {0} is not permitted under Payment Entry,حساب: {0} در ثبت پرداختی مجاز نیست,
 Accounting Dimension <b>{0}</b> is required for 'Balance Sheet' account {1}.,ابعاد حسابداری <b>{0}</b> برای حساب "ترازنامه" {1} ضروری است.,
 Accounting Dimension <b>{0}</b> is required for 'Profit and Loss' account {1}.,ابعاد حسابداری <b>{0}</b> برای حساب "سود و زیان" {1} ضروری است.,
@@ -3485,13 +3485,13 @@ Loans,وام,
 Loans provided to customers and employees.,وامهایی که به مشتریان و کارمندان داده می شود.,
 Location,محل,
 Looks like someone sent you to an incomplete URL. Please ask them to look into it.,به نظر می رسد کسی که شما را به URL های ناقص ارسال می شود. لطفا از آنها بخواهید به آن نگاه کنید.,
-Make Journal Entry,مجله را ورود,
-Make Purchase Invoice,را خریداری فاکتور,
-Manufactured,ساخته,
+Make Journal Entry,ایجاد سند حسابداری,
+Make Purchase Invoice,ایجاد فاکتور خرید,
+Manufactured,تولید شده,
 Mark Work From Home,علامت گذاری کار از خانه,
 Master,استاد,
 Max strength cannot be less than zero.,حداکثر قدرت نمی تواند کمتر از صفر باشد.,
-Maximum attempts for this quiz reached!,حداکثر تلاش برای این آزمون رسید!,
+Maximum attempts for this quiz reached!,حداکثر تلاش برای موفقیت در این آزمون!,
 Message,پیام,
 Missing Values Required,از دست رفتن ارزش های مورد نیاز,
 Mobile No,شماره موبایل,
@@ -3553,7 +3553,7 @@ Plaid public token error,خطای نشانه عمومی,
 Plaid transactions sync error,خطای همگام سازی معاملات کار شده,
 Please check the error log for details about the import errors,لطفاً جزئیات مربوط به خطاهای درون‌ریزی را وارد کنید,
 Please create <b>DATEV Settings</b> for Company <b>{}</b>.,لطفا ثبت <b>DATEV تنظیمات</b> برای شرکت <b>{}.</b>,
-Please create adjustment Journal Entry for amount {0} ,لطفاً مبلغ ورود مجله تنظیم را برای مبلغ {0} ثبت کنید,
+Please create adjustment Journal Entry for amount {0} ,لطفاً مبلغ سند حسابداری را برای مبلغ {0} تنظیم کنید,
 Please do not create more than 500 items at a time,لطفاً بیش از 500 مورد را همزمان ثبت نکنید,
 Please enter <b>Difference Account</b> or set default <b>Stock Adjustment Account</b> for company {0},لطفاً <b>حساب تفاضل</b> را وارد کنید یا <b>حساب تعدیل موجودی</b> پیش فرض را برای شرکت {0} تنظیم کنید ,
 Please enter GSTIN and state for the Company Address {0},لطفاً شناسه مالیاتی کالا یا خدمات و استان را برای آدرس شرکت {0} وارد کنید.,
@@ -3964,7 +3964,7 @@ Row {0}: Due Date in the Payment Terms table cannot be before Posting Date,رد�
 Cannot find {} for item {}. Please set the same in Item Master or Stock Settings.,{} برای مورد {} پیدا نمی شود. لطفاً همین مورد را در تنظیمات مورد اصلی یا انبار قرار دهید.,
 Row #{0}: The batch {1} has already expired.,ردیف شماره {0}: دسته {1} قبلاً منقضی شده است.,
 Start Year and End Year are mandatory,شروع سال و پایان سال اجباری است,
-GL Entry,ورودی دفتر کل,
+GL Entry,سند حسابداری,
 Cannot allocate more than {0} against payment term {1},نمی توان بیش از {0} نسبت به مدت پرداخت {1} اختصاص داد,
 The root account {0} must be a group,حساب ریشه {0} باید یک گروه باشد,
 Shipping rule not applicable for country {0} in Shipping Address,قانون حمل و نقل برای کشور {0} در آدرس حمل و نقل قابل استفاده نیست,
@@ -4104,7 +4104,7 @@ Determine Address Tax Category From,طبقه بندی مالیات آدرس را
 Over Billing Allowance (%),اضافه صورتحساب مجاز (٪),
 Credit Controller,کنترل اعتبار,
 Check Supplier Invoice Number Uniqueness,بررسی منحصر به فرد بودن شماره فاکتور تامین کننده,
-Make Payment via Journal Entry,پرداخت از طریق سند,
+Make Payment via Journal Entry,پرداخت از طریق سند حسابداری,
 Unlink Payment on Cancellation of Invoice,قطع ارتباط پرداخت در لغو فاکتور,
 Book Asset Depreciation Entry Automatically,ثبت خودکار استهلاک دارایی,
 Automatically Add Taxes and Charges from Item Tax Template,به طور خودکار مالیات و عوارض را از الگوی مالیات کالا اضافه کن,
@@ -4477,7 +4477,7 @@ Make Sales Invoice,ثبت فاکتور فروش,
 Mute Email,بیصدا کردن ایمیل,
 payment_url,payment_url,
 Payment Gateway Details,جزئیات درگاه پرداخت,
-Payment Schedule,برنامه زمانی پرداخت,
+Payment Schedule,تایم شیت پرداخت,
 Invoice Portion,بخش فاکتور,
 Payment Amount,مبلغ پرداختی,
 Payment Term Name,نام شرایط پرداخت,
@@ -4751,10 +4751,10 @@ Available Batch Qty at Warehouse,دسته موجود در انبار تعداد,
 Available Qty at Warehouse,تعداد موجود در انبار,
 Delivery Note Item,کالای حواله تحویل,
 Base Amount (Company Currency),مقدار پایه (واحد پول شرکت),
-Sales Invoice Timesheet,فاکتور فروش برنامه زمانی,
+Sales Invoice Timesheet,فاکتور فروش تایم شیت,
 Time Sheet,ساعت کارکرد,
 Billing Hours,ساعت صدور صورت حساب,
-Timesheet Detail,جزئیات برنامه زمانی,
+Timesheet Detail,جزئیات تایم شیت,
 Tax Amount After Discount Amount (Company Currency),مبلغ مالیات پس از تخفیف مقدار (واحد پول شرکت),
 Item Wise Tax Detail,جزئیات مالیات به تفکیک کالاها,
 Parenttype,Parenttype,
@@ -6542,15 +6542,15 @@ Weight,وزن,
 Parent Task,وظیفه والد,
 Timeline,جدول زمانی,
 Expected Time (in hours),زمان مورد انتظار (به ساعت),
-% Progress,٪ پیش رفتن,
-Is Milestone,است نقطه عطف,
+% Progress,٪ پیش رفت,
+Is Milestone,نقطه عطف (مایل استون) است,
 Task Description,شرح وظیفه,
 Dependencies,وابستگی ها,
 Dependent Tasks,وظایف وابسته,
 Depends on Tasks,بستگی به وظایف,
-Actual Start Date (via Timesheet),تاریخ شروع واقعی (از طریق تایم‌شیت),
-Actual Time in Hours (via Timesheet),زمان واقعی به ساعت (از طریق تایم‌شیت),
-Actual End Date (via Timesheet),تاریخ پایان واقعی (از طریق تایم‌شیت),
+Actual Start Date (via Timesheet),تاریخ شروع واقعی (از طریق تایم شیت),
+Actual Time in Hours (via Timesheet),زمان واقعی به ساعت (از طریق تایم شیت),
+Actual End Date (via Timesheet),تاریخ پایان واقعی (از طریق تایم شیت),
 Total Expense Claim (via Expense Claim),مجموع هزینه مطالبه شده (از طریق هزینه مطالبه),
 Review Date,تاریخ بررسی,
 Closing Date,تاریخ اختتامیه,
@@ -6825,7 +6825,7 @@ Enable Perpetual Inventory,فعال کردن موجودی دائمی,
 Default Inventory Account,حساب انبار پیش فرض,
 Stock Adjustment Account,حساب تنظیم موجودی,
 Fixed Asset Depreciation Settings,تنظیمات استهلاک دارائی های ثابت,
-Series for Asset Depreciation Entry (Journal Entry),سریال برای ورودی های ارزشمندی دارایی (ثبت سند),
+Series for Asset Depreciation Entry (Journal Entry),سریال برای ورودی های ارزشمندی دارایی (سند حسابداری),
 Gain/Loss Account on Asset Disposal,حساب سود/زیان ناشی از واگذاری دارایی‌ها,
 Asset Depreciation Cost Center,دارایی مرکز استهلاک هزینه,
 Budget Detail,جزئیات بودجه,
@@ -7078,10 +7078,10 @@ Has Variants,دارای گونه‌ها,
 "If this item has variants, then it cannot be selected in sales orders etc.",اگر این کالا گونه‌هایی دارد، نمی تواند در سفارشات فروش و جاهای دیگر انتخاب شود,
 Variant Based On,بر اساس نوع,
 Item Attribute,ویژگی کالا,
-"Sales, Purchase, Accounting Defaults",فروش، خرید، پیش فرض حسابداری,
-Item Defaults,مورد پیش فرض,
+"Sales, Purchase, Accounting Defaults",فروش، خرید، پیش فرض‌های حسابداری,
+Item Defaults,‌پیش فرض‌های کالا,
 "Purchase, Replenishment Details",خرید ، جزئیات دوباره پر کردن,
-Is Purchase Item,آیا مورد خرید,
+Is Purchase Item,کالای قابل خرید است؟,
 Default Purchase Unit of Measure,واحد خرید پیش فرض اندازه گیری,
 Minimum Order Qty,حداقل تعداد سفارش,
 Minimum quantity should be as per Stock UOM,حداقل مقدار باید مطابق با UOM Stock باشد,
@@ -7093,7 +7093,7 @@ Foreign Trade Details,جزییات تجارت خارجی,
 Country of Origin,کشور مبدا,
 Sales Details,جزییات فروش,
 Default Sales Unit of Measure,واحد اندازه گیری پیش‌فرض فروش,
-Is Sales Item,آیا کالا فروشی است,
+Is Sales Item,آیا کالا فروشی است؟,
 Max Discount (%),حداکثر تخفیف (٪),
 No of Months,بدون ماه,
 Customer Items,کالاهای مشتری,
@@ -7334,7 +7334,7 @@ Against Stock Entry,در مقابل انتقال مواد و کالا,
 Stock Entry Child,زیرمجموعه انتقال مواد و کالا,
 PO Supplied Item,کالای تأمین شده از طریق دستور خرید,
 Reference Purchase Receipt,رسید خرید مرجع,
-Stock Ledger Entry,ورودی دفتر انبار,
+Stock Ledger Entry,ثبت دفتر کل انبار,
 Outgoing Rate,نرخ خروجی,
 Actual Qty After Transaction,تعداد واقعی بعد از تراکنش,
 Stock Value Difference,اختلاف ارزش انبار,
@@ -7481,7 +7481,7 @@ Customer Credit Balance,تراز اعتباری مشتریان,
 Customer Ledger Summary,خلاصه دفتر کل مشتریان,
 Customer-wise Item Price,قیمت کالا به تفکیک مشتریان,
 Customers Without Any Sales Transactions,مشتریان بدون هیچگونه تراکنش فروش,
-Daily Timesheet Summary,خلاصه برنامه زمانی روزانه,
+Daily Timesheet Summary,خلاصه تایم شیت روزانه,
 DATEV,DATEV,
 Delayed Item Report,گزارش کالاهای تأخیر یافته,
 Delayed Order Report,گزارش سفارش‌های تأخیر یافته,
@@ -8503,7 +8503,7 @@ Restrict Backdated Leave Applications,برنامه های مرخصی با تار
 Sequence ID,شناسه توالی,
 Sequence Id,شناسه توالی,
 Allow multiple material consumptions against a Work Order,چندین مصرف مواد را در یک دستور کار مجاز بگذار,
-Plan time logs outside Workstation working hours,ثبت برنامه زمانی خارج از ساعت کاری ایستگاه کاری,
+Plan time logs outside Workstation working hours,ثبت تایم شیت خارج از ساعت کاری ایستگاه کاری,
 Plan operations X days in advance,برنامه ریزی عملیات X روز قبل,
 Time Between Operations (Mins),فاصله بین عملیات‌ها (دقیقه),
 Default: 10 mins,پیش فرض: 10 دقیقه,
@@ -8993,7 +8993,7 @@ If enabled, ledger entries will be posted for change amount in POS transactions,
 Asset Settings,تنظیمات دارایی,
 Period Closing Settings,تنظیمات بازه بستن حساب‌ها,
 Ignore Account Closing Balance,نادیده گرفتن تراز پایانی حساب,
-Financial reports will be generated using GL Entry doctypes (should be enabled if Period Closing Voucher is not posted for all years sequentially or missing),گزارشات مالی با استفاده از انواع سند ورودی دفتر اصلی تهیه خواهند شد (اگر سند پایان دوره برای تمام سال‌ها به ترتیب یا به طور کامل ثبت نشده باشد باید فعال شود),
+Financial reports will be generated using GL Entry doctypes (should be enabled if Period Closing Voucher is not posted for all years sequentially or missing),گزارش‌های مالی با استفاده از اسناد "ثبت دفتر کل" تولید خواهند شد (این گزینه باید فعال شود اگر "سند بستن دوره" به صورت متوالی برای تمام سال‌ها ثبت نشده یا فراموش شده است).,
 Show Balances in Chart Of Accounts,نمایش تراز در نمودار حساب‌ها,
 Enable Automatic Party Matching,فعال کردن تطبیق خودکار طرف حساب‌ها,
 Auto match and set the Party in Bank Transactions,تطبیق خودکار و تنظیم طرف حساب در تراکنش‌های بانکی,
@@ -9403,7 +9403,7 @@ Service Expenses,هزینه‌های خدمات,
 Iran Tax,مالیات ایران,
 VAT,مالیات ارزش افزوده,
 Start Timer,شروع تایمر,
-Fetch Timesheet,فراخوانی تایم‌شیت,
+Fetch Timesheet,فراخوانی تایم شیت,
 Overdue Payments,پرداخت‌های معوق,
 Total Interest,مجموع بهره,
 Dunning Level,سطح پیگیری مطالبات,
@@ -9748,9 +9748,9 @@ Missing Cost Center,مرکز هزینه گمشده,
 Invalid value {0} for {1} against account {2},مقدار نامعتبر {0} برای {1} در برابر حساب {2},
 Individual GL Entry cannot be cancelled.,ورودی فردی در دفتر کل قابل لغو نیست.,
 Please cancel related transaction.,لطفا تراکنش مرتبط را لغو کنید.,
-Journal Entry type should be set as Depreciation Entry for asset depreciation,نوع ورودی دفتر باید به عنوان ورودی استهلاک برای استهلاک دارایی تنظیم شود.,
+Journal Entry type should be set as Depreciation Entry for asset depreciation,نوع سند حسابداری باید به عنوان ورودی استهلاک برای استهلاک دارایی تنظیم شود.,
 Cannot apply TDS against multiple parties in one entry,نمی‌توان TDS را برای چندین طرف در یک ورودی اعمال کرد.,
-Journal Entry for Asset scrapping cannot be cancelled. Please restore the Asset.,ورودی دفترچه برای اسقاط دارایی قابل لغو نیست. لطفاً دارایی را بازیابی کنید.,
+Journal Entry for Asset scrapping cannot be cancelled. Please restore the Asset.,سند حسابداری برای اسقاط دارایی قابل لغو نیست. لطفاً دارایی را بازیابی کنید.,
 Row {0}: Account {1} and Party Type {2} have different account types,ردیف {0}: حساب {1} و نوع طرف {2} انواع مختلفی از حساب‌ها را دارند.,
 Advance paid against {0} {1} cannot be greater than Grand Total {2},پیش پرداخت انجام شده در برابر {0} {1} نمی‌تواند بیشتر از کل کل {2} باشد.,
 Row {0}: Both Debit and Credit values cannot be zero,ردیف {0}: هر دو مقدار بدهکار و بستانکار نمی‌توانند صفر باشند.,
@@ -9838,7 +9838,7 @@ Use 'Repost in background' button to trigger background job. Job can only be tri
 Repost in background,ارسال مجدد در پس‌زمینه,
 Repost started in the background,بازپست در پس‌زمینه شروع شد.,
 Accounting entries for this invoice needs to be reposted. Please click on 'Repost' button to update.,ورودی‌های حسابداری برای این فاکتور باید دوباره ارسال شوند. لطفاً برای به‌روزرسانی روی د,
-Get Timesheets,دریافت تایم‌شیت‌ها,
+Get Timesheets,دریافت تایم شیت‌ها,
 Set Loyalty Program,برنامه وفاداری را تنظیم کنید,
 To cancel a {} you need to cancel the POS Closing Entry {}.,برای لغو {} شما باید ورودی بستن POS {} را لغو کنید.,
 Please ensure {} account is a Balance Sheet account.,لطفاً مطمئن شوید که حساب {} یک حساب ترازنامه است.,
@@ -9951,7 +9951,7 @@ Row #{}: Finance Book should not be empty since you're using multiple.,ردیف 
 Missing Finance Book,کتاب حسابداری گمشده,
 Depreciation cannot be calculated for fully depreciated assets,استهلاک نمی‌تواند برای دارایی‌های کاملا استهلاک شده محاسبه شود.,
 Please do not book expense of multiple assets against one single Asset.,لطفاً هزینه چند دارایی را به یک دارایی واحد منظور نکنید.,
-Invalid Schedule,برنامه زمانی نامعتبر,
+Invalid Schedule,تایم شیت نامعتبر,
 Opening Accumulated Depreciation must be less than or equal to {0},مقدار افتادگی ارزش اولیه باید کمتر یا مساوی {0} باشد.,
 name,نام,
 Set {0} in asset category {1} for company {2},در دسته دارایی {1}، مجموعه {0} را برای شرکت {2} تنظیم کنید.,
@@ -9959,7 +9959,7 @@ Account not Found,حساب یافت نشد,
 Split qty cannot be grater than or equal to asset qty,تعداد تقسیم شده نمی‌تواند بیشتر یا مساوی تعداد دارایی باشد.,
 Asset updated after being split into Asset {0},دارایی پس از تقسیم شدن به دارایی {0} به روز شد.,
 Asset created after being split from Asset {0},دارایی که پس از جدا شدن از دارایی {0} ایجاد شده است.,
-This schedule was created when new Asset {0} was split from Asset {1}.,این برنامه زمانی زمانی ایجاد شد که دارایی جدید {0} از دارایی {1} جدا شد.,
+This schedule was created when new Asset {0} was split from Asset {1}.,این تایم شیت زمانی ایجاد شد که دارایی جدید {0} از دارایی {1} جدا شد.,
 Movement,جابجایی,
 Make Asset Movement,انتقال دارایی ایجاد کنید,
 Depreciation Expense Account should be an Income or Expense Account.,حساب هزینه استهلاک باید حساب درآمد یا هزینه باشد.,
@@ -9968,9 +9968,9 @@ Error while posting depreciation entries,خطا هنگام ارسال ورودی
 The following assets have failed to automatically post depreciation entries: {0},دارایی‌های زیر در ثبت خودکار سند استهلاک شکست خورده‌اند: {0},
 Here are the error logs for the aforementioned failed depreciation entries: {0},در اینجا لاگ‌های خطا برای ورودی‌های استهلاک ناموفق مذکور قرار دارد: {0},
 Please share this email with your support team so that they can find and fix the issue.,لطفا این ایمیل را با تیم پشتیبانی خود به اشتراک بگذارید تا آن‌ها بتوانند مشکل را پید,
-This schedule was created when Asset {0} was scrapped.,این برنامه زمانی زمانی ایجاد شد که دارایی {0} کنار گذاشته شد.,
+This schedule was created when Asset {0} was scrapped.,این تایم شیت زمانی ایجاد شد که دارایی {0} کنار گذاشته شد.,
 Asset scrapped,دارایی خارج از کاربرد شده,
-This schedule was created when Asset {0} was restored.,این برنامه زمانی زمانی ساخته شد که دارایی {0} بازیابی شد.,
+This schedule was created when Asset {0} was restored.,این تایم شیت زمانی ساخته شد که دارایی {0} بازیابی شد.,
 Asset restored,دارایی بازیابی شد,
 Target Item {0} is neither a Fixed Asset nor a Stock Item,مورد هدف {0} نه یک دارایی ثابت است و نه یک کالای موجودی,
 Target Item {0} must be a Fixed Asset item,کالای هدف {0} باید یک کالای دارایی ثابت باشد.,
@@ -10007,7 +10007,7 @@ Asset transferred to Location {0},دارایی به موقعیت {0} منتقل 
 Asset issued to Employee {0},دارایی منتقل شده به کارمند {0},
 Asset out of order due to Asset Repair {0},دارایی به دلیل تعمیر و نگهداری دارایی {0} در حالت خارج از سرویس است.,
 Asset updated after completion of Asset Repair {0},دارایی پس از اتمام تعمیر دارایی {0} به‌روزرسانی شد.,
-This schedule was created when Asset {0}'s Asset Repair {1} was cancelled.,این برنامه زمانی زمانی ساخته شد که تعمیر دارایی {0} لغو شد.,
+This schedule was created when Asset {0}'s Asset Repair {1} was cancelled.,این تایم شیت زمانی ساخته شد که تعمیر دارایی {0} لغو شد.,
 Asset updated after cancellation of Asset Repair {0},دارایی پس از لغو تعمیر دارایی {0} به روز شد.,
 Please update Repair Status.,لطفاً وضعیت تعمیر را به‌روز کنید.,
 Please enter Stock Items consumed during the Repair.,لطفاً اقلام سهامی که در طول تعمیر مصرف شده‌اند را وارد کنید.,
@@ -10531,9 +10531,9 @@ picked_qty,تعداد انتخاب شده,
 {0} units of Item {1} is picked in another Pick List.,{0} واحد از مورد {1} در لیست انتخاب دیگری انتخاب شده است.,
 Already Picked,قبلا انتخاب شده,
 Delivery Note(s) created for the Pick List,برای فهرست انتخاب، اسناد تحویل ایجاد شده است.,
-Return Qty from Rejected Warehouse,تعداد برگشتی از انبار رد شده,
-Return Qty,تعداد بازگشتی,
-Make Return Entry,ثبت سند بازگشت,
+Return Qty from Rejected Warehouse,تعداد برگشت شده از انبار رد شده,
+Return Qty,تعداد برگشت شده,
+Make Return Entry,ثبت سند برگشت,
 {0} account not found while submitting purchase receipt,حساب {0} هنگام ارائه رسید خرید پیدا نشد.,
 Adjustment based on Purchase Invoice rate,تنظیم بر اساس نرخ فاکتور خرید,
 Accounting Entry for {0},رکورد حسابداری برای {0},
@@ -10724,7 +10724,7 @@ Invalid Document Type,نوع سند نامعتبر,
 Total Issues,مجموع مسائل,
 No employee was scheduled for call popup,هیچ کارمندی برای پنجره بازشوی تماس برنامه‌ریزی نشده بود.,
 Error during caller information update,خطا در هنگام به‌روزرسانی اطلاعات تماس‌گیرنده,
-Call Schedule Row {0}: To time slot should always be ahead of From time slot.,برنامه زمانی ردیف {0}: بازه زمانی "تا" همیشه باید پیش از بازه زمانی "از" باشد.,
+Call Schedule Row {0}: To time slot should always be ahead of From time slot.,تایم شیت ردیف {0}: بازه زمانی "تا" همیشه باید پیش از بازه زمانی "از" باشد.,
 Please fix overlapping time slots for {0}.,لطفا بازه‌های زمانی تداخلی برای {0} را اصلاح کنید.,
 Move to Cart,انتقال به سبد خرید,
 Out of stock,خارج از موجودی,
@@ -11019,3 +11019,6 @@ Sets 'Rejected Warehouse' in each row of the Items table.,مجموعه 'انبا
 "# Asset Item\n\nAsset items are created based on Asset Category. You can create one or multiple items against once Asset Category. The sales and purchase transaction for Asset is done via Asset Item. ",# قلم دارایی \n\n\nقلم‌های دارایی بر اساس دسته‌بندی دارایی ایجاد می‌شوند. شما می‌توانید یک یا چند قلم را در مقابل یک دسته‌بندی دارایی ایجاد کنید. معاملات فروش و خرید دارایی از طریق قلم دارایی انجام می‌شود.,
 "# Asset Category\n\nAn Asset Category classifies different assets of a Company.\n\nYou can create an Asset Category based on the type of assets. For example, all your desktops and laptops can be part of an Asset Category named \"Electronic Equipments\". Create a separate category for furniture. Also, you can update default properties for each category, like:\n - Depreciation type and duration\n - Fixed asset account\n - Depreciation account\n",
 Standard with Numbers,استاندارد همراه با کدها,
+Exchange Gain Or Loss,سود یا زیان ناشی از تسعیر ارز,
+Financial Reports,گزارشات مالی,
+Ledgers,دفاتر,
