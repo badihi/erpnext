@@ -2915,7 +2915,7 @@ Update Account Number / Name,به‌روزرسانی شماره حساب / نا�
 Update Cost,به‌روزرسانی هزینه,
 Update Items,به‌روزرسانی موارد,
 Update Print Format,به‌روزرسانی فرمت چاپ,
-Update bank payment dates with journals.,به‌روزرسانی تاریخ های پرداخت بانک با مجلات.,
+Update bank payment dates with journals.,به‌روزرسانی تاریخ های پرداخت بانک با دفاتر.,
 Update in progress. It might take a while.,در حال بروزرسانی. ممکن است کمی طول بکشد.,
 Update rate as per last purchase,نرخ به‌روزرسانی به عنوان آخرین خرید,
 Update stock must be enable for the purchase invoice {0},به‌روزرسانی موجودی باید برای فاکتور خرید {0} فعال باشد,
@@ -11022,3 +11022,7 @@ Standard with Numbers,استاندارد همراه با کدها,
 Exchange Gain Or Loss,سود یا زیان ناشی از تسعیر ارز,
 Financial Reports,گزارشات مالی,
 Ledgers,دفاتر,
+Ignore Exchange Rate Revaluation Journals,نادیده گرفتن نرخ تسعیر دفاتر تجدید ارزیابی,
+Ignore System Generated Credit / Debit Notes,نادیده گرفتن اعلام بدهکاری / بستانکاری‌های ایجاد شده توسط سیستم,
+Voucher Subtype,نوع زیر سند,
+Preview Chart,پیش نمایش نمودار,

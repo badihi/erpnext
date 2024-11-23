@@ -9,11 +9,18 @@ jobs:
   Explore-Gitea-Actions:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out code
-        uses: actions/checkout@v2
 
-      - name: Update dependencies
-        run: bench update --requirements
+      - name: Check out code
+        run: |
+          cd /home/ahmad/erpnext/apps/erpnext
+          git pull internal main
 
       - name: Build project
-        run: bench build
+        run: |
+          cd /home/ahmad/erpnext
+          bench build
+
+      #- name: Update dependencies
+      #  run: |
+      #    cd /home/ahmad/erpnext
+      #    bench update --requirements
