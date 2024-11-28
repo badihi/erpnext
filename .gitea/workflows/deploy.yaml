@@ -24,3 +24,8 @@ jobs:
       #  run: |
       #    cd /home/ahmad/erpnext
       #    bench update --requirements
+
+      - name: Clear cache for sites
+        run: |
+          cd /home/ahmad/erpnext
+          bench --site all clear-cache
